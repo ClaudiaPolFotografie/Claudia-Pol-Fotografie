@@ -1,0 +1,405 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 25px 40px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+header h1 {
+    flex: 1;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+nav {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    margin: 0 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url("/static/images/hero.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 35px;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* CTA BUTTON */
+.cta-button {
+    padding: 14px 40px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    border-radius: 40px;
+    transition: 0.3s ease;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.cta-button:hover {
+    background: white;
+    color: black;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.secondary-button {
+    border: 1px solid white;
+    background: transparent;
+    font-size: 13px;
+    padding: 12px 35px;
+}
+
+.secondary-button:hover {
+    background: white;
+    color: black;
+}
+
+/* INTRO */
+.intro {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 0 20px;
+    line-height: 1.8;
+}
+
+.intro h2 {
+    margin-bottom: 30px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: black;
+    margin-top: 60px;
+}
+
+/* PORTFOLIO GRID */
+
+.portfolio {
+    padding: 80px 40px;
+}
+
+.portfolio h2 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-grid img:hover {
+    transform: scale(1.05);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.intro {
+    padding: 120px 40px;
+}
+
+.intro-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.intro-locatie {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.pricing-section {
+    padding: 160px 40px;
+    background: #0a141c;
+    color: #f5f5f5;
+}
+
+.pricing-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 100px auto;
+}
+
+.pricing-intro h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.pricing-intro p {
+    opacity: 0.75;
+    line-height: 1.7;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background: #111f2b;
+    padding: 50px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.pricing-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.pricing-card h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.pricing-card .description {
+    margin-bottom: 30px;
+    opacity: 0.75;
+    line-height: 1.6;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.pricing-card ul li {
+    margin-bottom: 12px;
+    opacity: 0.85;
+}
+
+.price {
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.pricing-button {
+    margin-top: auto;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 14px;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.pricing-button:hover {
+    background: white;
+    color: #0a141c;
+}
+
+.highlight {
+    background: #132635;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.contact-hero {
+    position: relative;
+    height: 90vh;
+    background-image: url("/static/images/contact.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10,20,28,0.75);
+}
+
+.contact-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    max-width: 600px;
+    padding: 40px;
+}
+
+.contact-content h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.contact-content p {
+    opacity: 0.85;
+    margin-bottom: 40px;
+    line-height: 1.7;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-button {
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 14px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background: white;
+    color: #0a141c;
+}
+
+.portfolio-intro {
+    max-width: 800px;
+    margin: 120px auto 60px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.portfolio-intro h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.portfolio-intro p {
+    line-height: 1.7;
+    opacity: 0.85;
+}
+
+.portfolio-banner {
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.portfolio-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10,20,28,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-overlay h1 {
+    color: white;
+    font-size: 52px;
+    letter-spacing: 3px;
+}

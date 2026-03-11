@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="portfolio-banner">
+
+    <img src="/static/images/banners/sport-banner.jpg">
+
+    <div class="banner-overlay">
+        <h1>Sportfotografie</h1>
+    </div>
+
+</section>
+
+<section class="portfolio-intro">
+
+    <h1>Sportfotografie</h1>
+
+    <p>
+        Sport draait om emotie, spanning en het perfecte moment. 
+        Tijdens wedstrijden en shoots zoek ik naar beelden die de 
+        intensiteit van het moment laten voelen. Van individuele 
+        sporters tot complete teams: ik leg niet alleen de actie 
+        vast, maar ook het verhaal erachter.
+    </p>
+
+</section>
+
+<section class="portfolio">
+    <h2>Sportfotografie</h2>
+    <div class="portfolio-grid">
+
+        {% for photo in photos %}
+        <a href="{{ url_for('static', filename='images/' + photo) }}" class="glightbox" data-gallery="sport">
+            <img src="{{ url_for('static', filename='images/' + photo) }}" alt="Sportfoto">
+        </a>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

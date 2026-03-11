@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="portfolio-banner">
+
+    <img src="/static/images/banners/overig-banner.jpg">
+
+    <div class="banner-overlay">
+        <h1>Fotoshoots</h1>
+    </div>
+
+</section>
+
+<section class="portfolio-intro">
+
+<h1>Overig</h1>
+
+<p>
+Portretfotografie draait om karakter, emotie en uitstraling.
+Of het nu gaat om een krachtig low key portret of een duoportret,
+het doel is altijd om een beeld te maken dat echt voelt.
+</p>
+<p>
+Twijfel je over een shoot met kinderen? Mijn eerste prioriteit
+is dat de kinderen plezier hebben tijdens de shoot. De mooie 
+beelden komen dan vanzelf. 
+</p>
+
+</section>
+
+<section class="portfolio">
+    <h2>Overige fotografie</h2>
+    <div class="portfolio-grid">
+        {% for photo in photos %}
+        <a href="{{ url_for('static', filename='images/' + photo) }}" class="glightbox" data-gallery="portret">
+            <img src="{{ url_for('static', filename='images/' + photo) }}" alt="Overig">
+        </a>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Claudia Pol Fotografie | Sport- en Portretfotograaf</title>
+
+<meta name="description" content="Sportfotografie, portretten en familieshoots door Claudia Pol Fotografie. Werkzaam in Wijk bij Duurstede, Houten en omgeving.">
+
+<meta name="keywords" content="sportfotograaf, portretfotograaf, familiefotograaf, Wijk bij Duurstede, Utrecht, sport fotografie">
+
+<meta name="author" content="Claudia Pol Fotografie">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+
+</head>
+<body>
+
+<header>
+    <h1>Claudia Pol Fotografie</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/sport">Actiefoto's</a>
+        <a href="/team">Teamfoto's en headshots</a>
+        <a href="/overig">Overig</a>
+        <a href="/tarieven">Tarieven</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+    © Claudia Pol Fotografie
+</footer>
+<script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    window.addEventListener('scroll', () => {
+        faders.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                el.classList.add('visible');
+            }
+        });
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+    const lightbox = GLightbox({
+        selector: '.glightbox'
+    });
+</script>
+</body>
+</html>

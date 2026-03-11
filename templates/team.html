@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="portfolio-banner">
+
+    <img src="/static/images/banners/team-banner.jpg">
+
+    <div class="banner-overlay">
+        <h1>Teamshoots</h1>
+    </div>
+
+</section>
+
+
+<section class="portfolio-intro">
+<h1>Teamfoto's</h1>
+<p>
+Aan het begin van het seizoen is een sterke teamfoto onmisbaar.
+Naast de groepsfoto maak ik ook individuele portretten van
+alle spelers, zodat teams een complete en professionele set
+beelden hebben voor communicatie en social media.
+<p>
+
+In samenwerking met Marjolein Veldhuizen fotografie is het ook
+mogelijk om per speler een foto te ontvangen van een 
+actiefoto en een headshot gecombineerd in een plaat. 
+</p>
+
+</section>
+
+<section class="portfolio">
+    <h2>Teamfotografie</h2>
+    <div class="portfolio-grid">
+        {% for photo in photos %}
+        <a href="{{ url_for('static', filename='images/' + photo) }}" class="glightbox" data-gallery="Team">
+            <img src="{{ url_for('static', filename='images/' + photo) }}" alt="Teamfoto">
+        </a>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

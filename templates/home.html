@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-overlay">
+        <h1>Voor een foto die je voelt.</h1>
+        <p>Pure emotie, in beweging en in stilte.</p>
+        <p>Sport- en portretfotografie.</p>
+       
+<div class="hero-buttons">
+    <a href="/contact" class="cta-button">Boek een shoot</a>
+
+    <a href="https://instagram.com/claudiapol_fotografie/" 
+       class="cta-button secondary-button" 
+       target="_blank">
+       Instagram
+    </a>
+
+    <a href="https://www.oypo.nl/nl/polfotografie" 
+       class="cta-button secondary-button" 
+       target="_blank">
+       Bekijk & bestel via Oypo
+    </a>
+</div>
+    </div>
+</section>
+
+<section class="intro fade-in">
+    <div class="intro-container">
+
+        <div class="intro-text">
+            <h2>Over mij</h2>
+<p>
+Welkom op mijn website, waar je een selectie van mijn werk vindt. 
+Kijk gerust rond – ik hoop dat mijn beelden je raken.
+</p>
+
+<p>
+Een aantal jaren geleden ontdekte ik mijn passie: fotografie. 
+Sindsdien heb ik verschillende cursussen, trainingen en workshops gevolgd, 
+met één doel: gevoel vastleggen in beeld.
+</p>
+
+<p>
+Ik leg niet alleen momenten vast, maar vooral emoties en verhalen. 
+Binnen de sport zoek ik naar pure momenten — focus, spanning en overwinning. 
+Ook in portretten draait het om karakter en gevoel.
+</p>
+
+<p>
+Ik werk met individuele sporters en met teams. Ik leg wedstrijden vast, 
+maar maak ook teamfoto’s en headshots aan het begin van het seizoen. 
+Daarnaast maak ik duoportretten en familieshoots, waarbij het plezier 
+tijdens de shoot van de foto moet afspatten.
+</p>
+
+<p>
+Wil je meer van mijn werk zien? Kijk dan ook eens op mijn Instagram-pagina.
+</p>
+
+
+        </div>
+
+
+
+        <div class="intro-image">
+            <img src="{{ url_for('static', filename='images/profiel.jpg') }}" alt="Claudia Pol">
+        </div>
+
+        <div class="intro-locatie">
+        <p>
+	Sport- en portretfotograaf gevestigd in Wijk bij Duurstede. 
+	Beschikbaar voor shoots in de regio Utrechtse Heuvelrug en sportevenementen door heel Nederland.
+	</p>
+        </div>
+
+
+    </div>
+</section>
+
+{% endblock %}
